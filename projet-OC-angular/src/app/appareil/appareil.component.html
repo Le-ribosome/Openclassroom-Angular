@@ -1,0 +1,19 @@
+<div class="container">
+
+
+  <div class="row" [ngClass]="{'alert':true, 'alert-success': postNote > 0, 
+    'alert-danger': postNote < 0, 
+    'alert-warning': postNote=== 0}">
+    <div style="float:right; font-weight:300;" class="text-right">{{ postDate }}</div>
+    <h4>{{ postTitle }}</h4>
+    <p>{{ postContent }}</p>
+
+    <div class="row text-right">
+          <p style="float: left; margin:20px 0px -5px 5px; font-weight: 100;">Note: {{ postNote }}</p>
+          <button style="margin-right: 10px;" class="btn btn-danger" (click)="onVoteNo()">NUL !</button>
+          <button style="margin-right: 10px;" class="btn btn-success" (click)="onVoteYes()">J'adoooore !</button>
+    </div>
+
+  </div>
+
+</div>
